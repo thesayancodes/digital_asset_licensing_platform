@@ -31,13 +31,7 @@ fn test_initialize_and_register_asset() {
     let name = String::from_str(&env, "Test Asset");
     let content_hash = String::from_str(&env, "abc123hash");
 
-    let asset_id = client.register_asset(
-        &owner,
-        &name,
-        &content_hash,
-        &AssetType::Image,
-        &500u32,
-    );
+    let asset_id = client.register_asset(&owner, &name, &content_hash, &AssetType::Image, &500u32);
 
     assert_eq!(asset_id, 1);
 
@@ -61,13 +55,7 @@ fn test_transfer_ownership() {
     let name = String::from_str(&env, "Transfer Test");
     let content_hash = String::from_str(&env, "hash456");
 
-    let asset_id = client.register_asset(
-        &owner,
-        &name,
-        &content_hash,
-        &AssetType::Audio,
-        &1000u32,
-    );
+    let asset_id = client.register_asset(&owner, &name, &content_hash, &AssetType::Audio, &1000u32);
 
     client.transfer_asset(&asset_id, &owner, &new_owner);
 
@@ -93,13 +81,8 @@ fn test_unauthorized_transfer_fails() {
     let name = String::from_str(&env, "Auth Test");
     let content_hash = String::from_str(&env, "hash789");
 
-    let asset_id = client.register_asset(
-        &owner,
-        &name,
-        &content_hash,
-        &AssetType::Document,
-        &200u32,
-    );
+    let asset_id =
+        client.register_asset(&owner, &name, &content_hash, &AssetType::Document, &200u32);
 
     // Try to transfer from not_owner — should fail with Unauthorized
     client.transfer_asset(&asset_id, &not_owner, &new_owner);
@@ -116,13 +99,7 @@ fn test_verify_asset_returns_info() {
     let name = String::from_str(&env, "Verify Test");
     let content_hash = String::from_str(&env, "verifyhash");
 
-    let asset_id = client.register_asset(
-        &owner,
-        &name,
-        &content_hash,
-        &AssetType::Video,
-        &750u32,
-    );
+    let asset_id = client.register_asset(&owner, &name, &content_hash, &AssetType::Video, &750u32);
 
     let info = client.verify_asset(&asset_id);
     assert_eq!(info.id, asset_id);

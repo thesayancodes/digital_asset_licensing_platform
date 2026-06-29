@@ -23,10 +23,8 @@ pub fn emit_license_purchased(
 }
 
 pub fn emit_license_revoked(env: &Env, license_id: u64) {
-    env.events().publish(
-        (symbol_short!("lic_rev"), license_id),
-        (),
-    );
+    env.events()
+        .publish((symbol_short!("lic_rev"), license_id), ());
 }
 
 pub fn emit_royalty_distributed(env: &Env, asset_id: u64, owner: &Address, amount: i128) {

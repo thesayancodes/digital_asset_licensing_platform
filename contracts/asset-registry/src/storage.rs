@@ -10,10 +10,7 @@ pub const PERSISTENT_LIFETIME_THRESHOLD: u32 = 120960; // ~7 days
 
 // --- Admin ---
 pub fn get_admin(env: &Env) -> Address {
-    env.storage()
-        .instance()
-        .get(&DataKey::Admin)
-        .unwrap()
+    env.storage().instance().get(&DataKey::Admin).unwrap()
 }
 
 pub fn set_admin(env: &Env, admin: &Address) {
@@ -26,10 +23,7 @@ pub fn has_admin(env: &Env) -> bool {
 
 // --- Version ---
 pub fn get_version(env: &Env) -> u32 {
-    env.storage()
-        .instance()
-        .get(&DataKey::Version)
-        .unwrap_or(0)
+    env.storage().instance().get(&DataKey::Version).unwrap_or(0)
 }
 
 pub fn set_version(env: &Env, version: u32) {
@@ -59,9 +53,7 @@ pub fn get_asset_count(env: &Env) -> u64 {
 }
 
 pub fn set_asset_count(env: &Env, count: u64) {
-    env.storage()
-        .instance()
-        .set(&DataKey::AssetCount, &count);
+    env.storage().instance().set(&DataKey::AssetCount, &count);
 }
 
 pub fn increment_asset_count(env: &Env) -> u64 {
@@ -105,10 +97,9 @@ pub fn add_owner_asset(env: &Env, owner: &Address, asset_id: u64) {
 
 // --- TTL Extensions ---
 pub fn extend_instance_ttl(env: &Env) {
-    env.storage().instance().extend_ttl(
-        INSTANCE_LIFETIME_THRESHOLD,
-        INSTANCE_BUMP_AMOUNT,
-    );
+    env.storage()
+        .instance()
+        .extend_ttl(INSTANCE_LIFETIME_THRESHOLD, INSTANCE_BUMP_AMOUNT);
 }
 
 pub fn extend_persistent_ttl(env: &Env, key: &DataKey) {

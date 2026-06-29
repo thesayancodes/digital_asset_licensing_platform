@@ -14,9 +14,7 @@ use types::{License, LicenseStatus, LicenseTemplate, LicenseType, RoyaltyRecord}
 
 // Import the AssetRegistry contract WASM for cross-contract calls
 mod asset_registry_contract {
-    soroban_sdk::contractimport!(
-        file = "../target/wasm32v1-none/release/asset_registry.wasm"
-    );
+    soroban_sdk::contractimport!(file = "../target/wasm32v1-none/release/asset_registry.wasm");
 }
 
 #[contract]

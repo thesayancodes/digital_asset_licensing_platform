@@ -17,10 +17,8 @@ pub fn emit_asset_transferred(env: &Env, asset_id: u64, from: &Address, to: &Add
 }
 
 pub fn emit_asset_status_changed(env: &Env, asset_id: u64, status: &AssetStatus) {
-    env.events().publish(
-        (symbol_short!("status"), asset_id),
-        status.clone(),
-    );
+    env.events()
+        .publish((symbol_short!("status"), asset_id), status.clone());
 }
 
 pub fn emit_admin_changed(env: &Env, old_admin: &Address, new_admin: &Address) {

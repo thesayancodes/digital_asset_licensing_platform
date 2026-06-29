@@ -5,9 +5,7 @@ use soroban_sdk::{testutils::Address as _, testutils::Events as _, Address, Env,
 use types::{LicenseStatus, LicenseType};
 
 mod asset_registry_contract {
-    soroban_sdk::contractimport!(
-        file = "../target/wasm32v1-none/release/asset_registry.wasm"
-    );
+    soroban_sdk::contractimport!(file = "../target/wasm32v1-none/release/asset_registry.wasm");
 }
 
 struct TestSetup {
@@ -77,11 +75,9 @@ fn test_create_template_and_purchase() {
 
     // Purchase a license
     let buyer = Address::generate(&s.env);
-    let license_id = s.license_mgr_client.purchase_license(
-        &buyer,
-        &1u64,
-        &LicenseType::Commercial,
-    );
+    let license_id = s
+        .license_mgr_client
+        .purchase_license(&buyer, &1u64, &LicenseType::Commercial);
 
     assert_eq!(license_id, 1);
 
@@ -109,11 +105,9 @@ fn test_purchase_emits_events() {
 
     // Purchase
     let buyer = Address::generate(&s.env);
-    let _license_id = s.license_mgr_client.purchase_license(
-        &buyer,
-        &1u64,
-        &LicenseType::Personal,
-    );
+    let _license_id = s
+        .license_mgr_client
+        .purchase_license(&buyer, &1u64, &LicenseType::Personal);
 
     // Verify events were emitted (events().all() returns all events)
     let all_events = s.env.events().all();
@@ -145,11 +139,9 @@ fn test_cross_contract_verification() {
 
     // Purchase also calls verify_asset cross-contract
     let buyer = Address::generate(&s.env);
-    let license_id = s.license_mgr_client.purchase_license(
-        &buyer,
-        &1u64,
-        &LicenseType::Enterprise,
-    );
+    let license_id = s
+        .license_mgr_client
+        .purchase_license(&buyer, &1u64, &LicenseType::Enterprise);
 
     let license = s.license_mgr_client.get_license(&license_id);
     assert_eq!(license.purchase_price, 5000);
@@ -170,18 +162,17 @@ fn test_revoke_license() {
     );
 
     let buyer = Address::generate(&s.env);
-    let license_id = s.license_mgr_client.purchase_license(
-        &buyer,
-        &1u64,
-        &LicenseType::Editorial,
-    );
+    let license_id = s
+        .license_mgr_client
+        .purchase_license(&buyer, &1u64, &LicenseType::Editorial);
 
     // Verify it's active
     let license = s.license_mgr_client.get_license(&license_id);
     assert_eq!(license.status, LicenseStatus::Active);
 
     // Revoke (as asset owner)
-    s.license_mgr_client.revoke_license(&s.asset_owner, &license_id);
+    s.license_mgr_client
+        .revoke_license(&s.asset_owner, &license_id);
 
     // Verify it's revoked
     let license = s.license_mgr_client.get_license(&license_id);
