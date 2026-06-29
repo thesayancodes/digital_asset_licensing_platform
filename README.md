@@ -521,7 +521,8 @@ lumina/
 
 ## 🎥 Demo
 
-> 📹 Demo recording will be published here after the final deployment.
+https://github.com/user-attachments/assets/73f074c3-e540-4947-ba29-bb2bc1b28d0a
+
 
 In the meantime, clone and run locally — full testnet contracts are live.
 
