@@ -7,11 +7,11 @@
 /* --- Custom Properties --- */
 :root {
   /* Background palette */
-  --bg-primary: #0a0a12;
-  --bg-secondary: #12121f;
-  --bg-tertiary: #1a1a2e;
-  --bg-card: rgba(255, 255, 255, 0.03);
-  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --bg-primary: #050818;
+  --bg-secondary: #060919;
+  --bg-tertiary: #090d23;
+  --bg-card: rgba(255, 255, 255, 0.02);
+  --bg-card-hover: rgba(255, 255, 255, 0.04);
   --bg-elevated: rgba(255, 255, 255, 0.05);
 
   /* Accent colors */

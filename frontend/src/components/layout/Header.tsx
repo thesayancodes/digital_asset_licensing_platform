@@ -1,13 +1,13 @@
 'use client';
 
 // ============================================
-// Header
+// Header (Matches screenshot style)
 // ============================================
 
 import { useState, useEffect } from 'react';
-import { Search, Bell, Menu } from 'lucide-react';
-import { WalletButton } from '@/components/shared/WalletButton';
+import { Search, Bell, ChevronDown, Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useWallet } from '@/features/wallet/hooks/useWallet';
 
 interface HeaderProps {
   title?: string;
@@ -21,6 +21,7 @@ export function Header({
   isSidebarCollapsed,
 }: HeaderProps) {
   const [isDesktop, setIsDesktop] = useState(false);
+  const { isConnected } = useWallet();
 
   // Track viewport width at runtime to bypass CSS stylesheet caching
   useEffect(() => {
@@ -33,53 +34,66 @@ export function Header({
   return (
     <header
       id="app-header"
-      className="fixed top-0 right-0 z-30 h-16 flex items-center justify-between gap-4 px-6 bg-bg-primary/80 backdrop-blur-xl border-b border-border-default transition-all duration-300"
+      className="fixed top-0 right-0 z-30 h-16 flex items-center justify-between gap-4 px-6 bg-[#060919]/90 backdrop-blur-xl border-b border-[#141b3a] transition-all duration-300"
       style={{
         left: isDesktop ? (isSidebarCollapsed ? '72px' : '256px') : '0px'
       }}
     >
-      {/* Left: Menu + Title */}
+      {/* Left: Menu + Title Group */}
       <div className="flex items-center gap-4">
         <button
           id="header-menu-button"
           onClick={onMenuClick}
-          className="lg:hidden rounded-lg p-2 text-text-muted hover:bg-white/5 hover:text-text-primary transition-colors"
+          className="lg:hidden rounded-lg p-2 text-white/50 hover:bg-white/5 hover:text-white transition-colors"
         >
           <Menu className="h-5 w-5" />
         </button>
-        <h1 className="text-lg font-semibold text-text-primary">{title}</h1>
+        <div className="flex flex-col">
+          <span className="text-[9px] font-black text-white/30 tracking-widest uppercase -mb-0.5">
+            Overview
+          </span>
+          <h1 className="text-xl font-extrabold text-white tracking-wide">{title}</h1>
+        </div>
       </div>
 
       {/* Right: Search + Actions */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-4">
         {/* Search Bar */}
-        <div className="hidden md:flex items-center gap-2 rounded-xl border border-border-default bg-white/[0.02] px-3 py-2 w-64">
-          <Search className="h-4 w-4 text-text-muted" />
+        <div className="hidden md:flex items-center gap-2.5 rounded-lg border border-[#141b3a] bg-[#090d23] px-3.5 py-2 w-64 focus-within:border-blue-500/40 transition-all">
+          <Search className="h-4 w-4 text-white/30" />
           <input
             id="header-search"
             type="text"
             placeholder="Search assets, licenses..."
-            className="flex-1 bg-transparent text-sm text-text-primary placeholder:text-text-muted outline-none"
+            className="flex-1 bg-transparent text-xs text-white placeholder:text-white/30 outline-none"
           />
-          <kbd className="hidden lg:inline-flex items-center rounded border border-border-default px-1.5 text-[10px] text-text-muted font-mono">
-            ⌘K
-          </kbd>
         </div>
 
-        {/* Notifications */}
+        {/* Notifications Bell */}
         <button
           id="header-notifications"
-          className="relative rounded-xl p-2.5 text-text-muted hover:bg-white/5 hover:text-text-primary transition-colors"
+          className="relative rounded-lg p-2 text-white/40 hover:bg-white/5 hover:text-white transition-colors"
         >
-          <Bell className="h-[18px] w-[18px]" />
-          <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-accent-primary animate-pulse" />
+          <Bell className="h-5 w-5" />
+          <span className="absolute top-1 right-1 h-4 w-4 rounded-full bg-rose-500 text-[9px] font-black text-white flex items-center justify-center border border-[#060919]">
+            2
+          </span>
         </button>
 
-        {/* Divider */}
-        <div className="hidden md:block h-6 w-px bg-border-default" />
+        {/* Network Indicator Selector */}
+        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#090d23] border border-[#141b3a] text-xs font-semibold text-white/80 cursor-pointer hover:bg-[#0c1333] transition-all">
+          <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Testnet</span>
+          <ChevronDown className="w-3.5 h-3.5 text-white/30 ml-1" />
+        </div>
 
-        {/* Wallet */}
-        <WalletButton />
+        {/* Divider */}
+        <div className="h-5 w-px bg-[#141b3a]" />
+
+        {/* User Avatar Initials */}
+        <div className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-600 border border-blue-400/30 text-xs font-extrabold text-white">
+          SS
+        </div>
       </div>
     </header>
   );
