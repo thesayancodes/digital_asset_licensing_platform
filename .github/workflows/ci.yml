@@ -44,7 +44,7 @@ jobs:
           restore-keys: ${{ runner.os }}-cargo-
 
       - name: Install Stellar CLI
-        run: curl -fsSL https://github.com/stellar/stellar-cli/raw/main/install.sh | sudo sh -s -- --to /usr/local/bin
+        run: curl -fsSL https://github.com/stellar/stellar-cli/raw/main/install.sh | sudo sh -s -- --dir=/usr/local/bin
 
       - name: Check formatting
         run: cargo fmt --all -- --check
