@@ -98,7 +98,9 @@ Every transaction goes through a 5-stage lifecycle: Building → Simulating → 
 
 ### 📊 Dashboard — Your Creative Empire at a Glance
 
-<img src="./lumina-readme/dashboard.svg" alt="Lumina Dashboard" width="100%"/>
+<img width="1918" height="912" alt="image" src="https://github.com/user-attachments/assets/a30e80a9-1e47-4d89-90a5-ead3efc43984" />
+
+
 
 > Real-time stats, revenue charts, license distribution, recent assets, and live activity — all in one view.
 
@@ -106,7 +108,8 @@ Every transaction goes through a 5-stage lifecycle: Building → Simulating → 
 
 ### 📋 Asset Registration — On-Chain in Seconds
 
-<img src="./lumina-readme/register.svg" alt="Lumina Asset Registration" width="100%"/>
+<img width="1918" height="911" alt="image" src="https://github.com/user-attachments/assets/f3f6079a-f1af-4eea-baf7-a49bdd342dd4" />
+
 
 > Upload your asset, configure license terms, and watch the 5-stage transaction lifecycle unfold in real time.
 
@@ -114,7 +117,8 @@ Every transaction goes through a 5-stage lifecycle: Building → Simulating → 
 
 ### 📡 Live Activity Feed — Every Event, Instantly
 
-<img src="./lumina-readme/activity.svg" alt="Lumina Activity Feed" width="100%"/>
+<img width="1918" height="913" alt="image" src="https://github.com/user-attachments/assets/3592cb6c-a669-4206-abab-f0be8224f6fd" />
+
 
 > Real-time Soroban event stream. Every license purchase, royalty payment, and asset registration — live.
 
