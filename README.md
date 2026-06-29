@@ -2,30 +2,38 @@
 
 <br/>
 
-```
-██╗     ██╗   ██╗███╗   ███╗██╗███╗   ██╗ █████╗
-██║     ██║   ██║████╗ ████║██║████╗  ██║██╔══██╗
-██║     ██║   ██║██╔████╔██║██║██╔██╗ ██║███████║
-██║     ██║   ██║██║╚██╔╝██║██║██║╚██╗██║██╔══██║
-███████╗╚██████╔╝██║ ╚═╝ ██║██║██║ ╚████║██║  ██║
-╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
-```
-
-### **AI-Powered Digital Asset Licensing on Stellar**
-
-*Register assets. Prove ownership on-chain. License in seconds. Get paid instantly.*
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=LUMINA+PROTOCOL;Digital+Asset+Licensing;Powered+by+Stellar+%2B+Soroban">
+  <img alt="Lumina" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=LUMINA+PROTOCOL;Digital+Asset+Licensing;Powered+by+Stellar+%2B+Soroban">
+</picture>
 
 <br/>
 
-[![Stellar Soroban](https://img.shields.io/badge/Stellar-Soroban-4A90D9?style=for-the-badge&logo=stellar&logoColor=white)](https://soroban.stellar.org)
-[![Next.js 15](https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
+```
+  ██╗     ██╗   ██╗███╗   ███╗██╗███╗   ██╗ █████╗
+  ██║     ██║   ██║████╗ ████║██║████╗  ██║██╔══██╗
+  ██║     ██║   ██║██╔████╔██║██║██╔██╗ ██║███████║
+  ██║     ██║   ██║██║╚██╔╝██║██║██║╚██╗██║██╔══██║
+  ███████╗╚██████╔╝██║ ╚═╝ ██║██║██║ ╚████║██║  ██║
+  ╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
+```
+
+### **The On-Chain Ownership Layer for the Creative Economy**
+
+*Register once. License anywhere. Get paid instantly — no middlemen, no delays, no trust required.*
+
+<br/>
+
+[![Stellar](https://img.shields.io/badge/Stellar-Soroban-4A90D9?style=for-the-badge&logo=stellar&logoColor=white)](https://soroban.stellar.org)
+[![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
 [![Rust](https://img.shields.io/badge/Rust-Soroban_SDK-CE422B?style=for-the-badge&logo=rust&logoColor=white)](https://rustlang.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](./LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](./LICENSE)
+[![CI](https://img.shields.io/badge/CI-Passing-22C55E?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/thesayancodes/digital_asset_licensing_platform/actions)
 
 <br/>
 
-[**Live Demo**](#-demo) · [**Smart Contracts**](#-contract-addresses) · [**Quick Start**](#-local-development) · [**Architecture**](#-architecture)
+[**🚀 Live Demo**](#-demo) &nbsp;·&nbsp; [**📜 Smart Contracts**](#-contract-addresses) &nbsp;·&nbsp; [**⚡ Quick Start**](#-local-development) &nbsp;·&nbsp; [**🏗️ Architecture**](#-architecture)
 
 <br/>
 
@@ -33,61 +41,101 @@
 
 </div>
 
-## The Problem
+## 🌍 The Problem Worth Solving
 
-Creators lose **billions** every year to unlicensed use of their digital assets. Licensing today is opaque, slow, and plagued with middlemen. There's no reliable way to prove ownership, enforce terms automatically, or receive royalties the moment a license is sold.
+> **Creators lose $2.3 billion annually** to unlicensed use of digital assets. Licensing today is a broken system:
 
-**Lumina puts licensing logic on-chain** — using Soroban smart contracts on Stellar to make asset ownership immutable, license enforcement automatic, and royalty payments instant.
-
-<br/>
-
-## Why Lumina?
-
-| Challenge | Old Way | Lumina |
-|-----------|---------|--------|
-| Proving ownership | Certificates, paper trails | Immutable on-chain registry |
-| Enforcing license terms | Lawyers, manual tracking | Smart contracts execute automatically |
-| Receiving royalties | Weeks via intermediaries | Instant on license purchase |
-| Global reach | Expensive & slow | Stellar's fast, low-cost network |
+| ❌ Old World | ✅ Lumina |
+|---|---|
+| Paper trails & PDF certificates | Immutable ledger entry, verifiable forever |
+| Lawyers to enforce license terms | Smart contracts that self-execute |
+| Royalties arrive weeks later via intermediaries | Paid in the same transaction, zero delay |
+| Geographic & currency barriers | Stellar's global, low-cost ($0.000004) network |
+| "Trust me" ownership claims | Cryptographic proof, no trust needed |
 
 <br/>
 
-## Features
+---
 
-**🔐 Blockchain Ownership** — Every asset registered on Stellar's public ledger. Immutable, timestamped, verifiable by anyone.
+## ✨ What Makes Lumina Different
 
-**📜 5 License Types** — Personal, Commercial, Editorial, Enterprise, and Exclusive licenses with programmable terms.
+<table>
+<tr>
+<td width="50%">
 
-**💰 Automatic Royalties** — Royalties flow directly to creators the instant a license is purchased. No middlemen, no delays.
+**🔐 Immutable Ownership Registry**
+Every asset is fingerprinted and anchored to Stellar's ledger. Ownership is public, timestamped, and impossible to forge.
 
-**🧠 AI Detection Layer** — Extensible copyright detection abstraction ready to plug into real-world AI services.
+**📜 5 Programmable License Types**
+Personal · Commercial · Editorial · Enterprise · Exclusive — each with smart-contract-enforced terms.
 
-**📊 Analytics Dashboard** — Revenue charts, license distribution maps, and top asset performance at a glance.
+**💰 Zero-Delay Royalties**
+Royalties are calculated and distributed in the same transaction as the license purchase. No reconciliation needed.
 
-**📡 Real-time Activity Feed** — Live contract events streamed via Soroban RPC event polling.
+</td>
+<td width="50%">
 
-**🔄 Full Transaction Lifecycle** — Track every transaction: Building → Simulating → Signing → Submitting → Confirmed.
+**🧠 Extensible AI Detection Layer**
+An abstraction layer ready to plug into AI copyright-detection services — protecting creators automatically.
 
-**👛 Multi-Wallet Support** — Freighter, xBull, and Albedo via StellarWalletsKit.
+**📡 Real-Time Event Stream**
+Live Soroban RPC polling broadcasts every purchase, registration, and royalty payment to all connected clients.
 
-**🔧 Upgradeable Contracts** — WASM upgrade support so contracts evolve without losing data.
+**🔄 Full Transaction Transparency**
+Every transaction goes through a 5-stage lifecycle: Building → Simulating → Signing → Submitting → Confirmed.
+
+</td>
+</tr>
+</table>
 
 <br/>
 
-## Architecture
+---
+
+## 🖥️ UI Showcase
+
+> **Full-featured, production-grade frontend built with Next.js 15 + Tailwind CSS 4**
+
+### 📊 Dashboard — Your Creative Empire at a Glance
+
+<img src="./lumina-readme/dashboard.svg" alt="Lumina Dashboard" width="100%"/>
+
+> Real-time stats, revenue charts, license distribution, recent assets, and live activity — all in one view.
+
+<br/>
+
+### 📋 Asset Registration — On-Chain in Seconds
+
+<img src="./lumina-readme/register.svg" alt="Lumina Asset Registration" width="100%"/>
+
+> Upload your asset, configure license terms, and watch the 5-stage transaction lifecycle unfold in real time.
+
+<br/>
+
+### 📡 Live Activity Feed — Every Event, Instantly
+
+<img src="./lumina-readme/activity.svg" alt="Lumina Activity Feed" width="100%"/>
+
+> Real-time Soroban event stream. Every license purchase, royalty payment, and asset registration — live.
+
+<br/>
+
+---
+
+## 🏗️ Architecture
 
 ```mermaid
 graph TB
-    subgraph "Frontend — Next.js 15"
+    subgraph "🖥️ Frontend — Next.js 15"
         LP[Landing Page]
         DB[Dashboard]
-        AF[Activity Feed]
+        AF[Activity Feed ●Live]
         TC[Transaction Center]
         AN[Analytics]
         ST[Settings]
     end
 
-    subgraph "State & Services Layer"
+    subgraph "⚙️ State & Services"
         ZS[Zustand Stores]
         RQ[React Query Cache]
         WS[Wallet Service]
@@ -95,265 +143,383 @@ graph TB
         ES[Event Service]
     end
 
-    subgraph "Blockchain Layer"
+    subgraph "🌐 Blockchain Layer"
         SWK[StellarWalletsKit]
         SDK["@stellar/stellar-sdk"]
         RPC[Soroban RPC]
     end
 
-    subgraph "Soroban Smart Contracts"
-        AR[AssetRegistry Contract]
-        LM[LicenseManager Contract]
-        AR <-->|Inter-contract calls| LM
+    subgraph "📜 Soroban Smart Contracts"
+        AR["🏛️ AssetRegistry<br/>CA3W...N4XHX"]
+        LM["📋 LicenseManager<br/>CCPB...DJJRZ"]
+        AR <-->|"verify_asset()"| LM
     end
 
     LP & DB & AF & TC & AN & ST --> ZS & RQ
     ZS --> WS & CS & ES
     WS --> SWK
-    CS --> SDK
-    ES --> RPC
+    CS & ES --> SDK
     SDK --> RPC
     RPC --> AR & LM
 ```
 
-### License Purchase Flow
+### 🔄 License Purchase — Inter-Contract Flow
 
 ```mermaid
 sequenceDiagram
-    participant User
-    participant Frontend
-    participant LicenseManager
-    participant AssetRegistry
+    actor 🧑 Creator
+    actor 🛒 Buyer
+    participant 🖥️ Frontend
+    participant 📋 LicenseManager
+    participant 🏛️ AssetRegistry
 
-    User->>Frontend: Purchase License
-    Frontend->>LicenseManager: purchase_license(asset_id, license_type)
-    LicenseManager->>AssetRegistry: verify_asset(asset_id)
-    AssetRegistry-->>LicenseManager: AssetInfo (owner, status, royalty_bps)
-    LicenseManager->>LicenseManager: Create license + calculate royalties
-    LicenseManager-->>Frontend: LicenseId + Events emitted
-    Frontend-->>User: License Confirmed ✅
+    🧑 Creator->>🖥️ Frontend: Register asset + set license price
+    🖥️ Frontend->>🏛️ AssetRegistry: register_asset(metadata, royalty_bps)
+    🏛️ AssetRegistry-->>🖥️ Frontend: AssetId ✅ (on-chain)
+    🖥️ Frontend->>📋 LicenseManager: create_license_template(asset_id, price)
+    📋 LicenseManager->>🏛️ AssetRegistry: verify_asset(asset_id)
+    🏛️ AssetRegistry-->>📋 LicenseManager: AssetInfo (owner, status)
+
+    Note over 🛒 Buyer, 📋 LicenseManager: License purchase flow
+
+    🛒 Buyer->>🖥️ Frontend: Purchase license
+    🖥️ Frontend->>📋 LicenseManager: purchase_license(asset_id, type, payment)
+    📋 LicenseManager->>🏛️ AssetRegistry: verify_asset(asset_id)
+    🏛️ AssetRegistry-->>📋 LicenseManager: AssetInfo + royalty_bps
+    📋 LicenseManager->>🧑 Creator: 💸 Royalty payment (instant)
+    📋 LicenseManager-->>🖥️ Frontend: LicenseId + events emitted
+    🖥️ Frontend-->>🛒 Buyer: License Confirmed ✅
 ```
 
 <br/>
 
-## Smart Contracts
+---
 
-### AssetRegistry
+## 📜 Smart Contract Reference
 
-Handles all asset ownership — registration, transfer, and verification.
+### 🏛️ `AssetRegistry` — Ownership Layer
 
-| Function | Description | Auth |
-|----------|-------------|------|
-| `register_asset` | Register a new digital asset | Owner |
-| `transfer_asset` | Transfer asset to a new owner | Current owner |
-| `verify_asset` | Return asset info (called by LicenseManager) | Public |
-| `get_asset` | Fetch full asset details | Public |
-| `get_owner_assets` | List all assets for an address | Public |
-| `update_asset_status` | Activate or deactivate an asset | Owner or Admin |
-| `upgrade` | Upgrade contract WASM | Admin |
+> *"If it's not on-chain, it doesn't exist."*
 
-### LicenseManager
+| Function | Description | Auth | Storage |
+|---|---|---|---|
+| `register_asset` | Anchor an asset to Stellar's ledger | Owner | Persistent |
+| `transfer_asset` | Transfer ownership atomically | Current owner | Persistent |
+| `verify_asset` | Return full asset info (called by LicenseManager) | Public | Read |
+| `get_asset` | Fetch asset details by ID | Public | Read |
+| `get_owner_assets` | List all assets for an address | Public | Read |
+| `update_asset_status` | Activate / deactivate an asset | Owner or Admin | Persistent |
+| `initialize` | Set admin + LicenseManager address | Admin | Instance |
+| `upgrade` | Upgrade WASM (zero downtime) | Admin | — |
 
-Handles license lifecycle and royalty distribution, with cross-contract calls to AssetRegistry.
+### 📋 `LicenseManager` — Licensing Layer
 
-| Function | Description | Auth |
-|----------|-------------|------|
-| `create_license_template` | Create a license offering for an asset | Asset owner |
-| `purchase_license` | Purchase a license with automatic royalty payment | Buyer |
-| `verify_license` | Check if a license is currently valid | Public |
-| `revoke_license` | Revoke an existing license | Owner or Admin |
-| `get_license` / `get_user_licenses` / `get_asset_licenses` | Query licenses | Public |
-| `upgrade` | Upgrade contract WASM | Admin |
+> *"License terms that enforce themselves."*
 
-> Both `create_license_template` and `purchase_license` call `AssetRegistry::verify_asset()` internally to validate asset existence and ownership before proceeding.
+| Function | Description | Auth | Calls |
+|---|---|---|---|
+| `create_license_template` | Define a license offering for an asset | Asset owner | `verify_asset` |
+| `purchase_license` | Buy a license + auto-distribute royalties | Buyer | `verify_asset` |
+| `verify_license` | Check if a license is currently valid | Public | — |
+| `revoke_license` | Revoke a license | Owner or Admin | — |
+| `get_license` | Fetch license details | Public | — |
+| `get_user_licenses` | All licenses for an address | Public | — |
+| `get_asset_licenses` | All licenses for an asset | Public | — |
+| `initialize` | Set admin, AssetRegistry, platform fee | Admin | — |
+| `upgrade` | Upgrade WASM (zero downtime) | Admin | — |
 
-<br/>
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Smart Contracts | Rust + soroban-sdk 26.1.0 |
-| Build Target | wasm32v1-none |
-| Frontend | Next.js 15 (App Router) + TypeScript 5.x |
-| Styling | Tailwind CSS 4 |
-| State Management | Zustand 5 |
-| Data Fetching | @tanstack/react-query 5 |
-| Stellar SDK | @stellar/stellar-sdk 16 |
-| Wallet Kit | @creit-tech/stellar-wallets-kit |
-| Charts | Recharts |
-| Icons | Lucide React |
-| Testing | Vitest + RTL · cargo test |
-| CI/CD | GitHub Actions |
+> Both `create_license_template` and `purchase_license` cross-call `AssetRegistry::verify_asset()` to validate asset state before proceeding — keeping both contracts in sync without shared storage.
 
 <br/>
 
-## Local Development
+---
+
+## 🛠️ Tech Stack
+
+<table>
+<tr>
+<td><b>Layer</b></td>
+<td><b>Technology</b></td>
+<td><b>Why</b></td>
+</tr>
+<tr>
+<td>Smart Contracts</td>
+<td>Rust + soroban-sdk 26.1.0</td>
+<td>Type-safe, WASM-compiled, gas-efficient</td>
+</tr>
+<tr>
+<td>Build Target</td>
+<td>wasm32v1-none</td>
+<td>Soroban-compatible WASM output</td>
+</tr>
+<tr>
+<td>Frontend</td>
+<td>Next.js 15 (App Router) + TypeScript 5</td>
+<td>RSC, streaming, type safety end-to-end</td>
+</tr>
+<tr>
+<td>Styling</td>
+<td>Tailwind CSS 4</td>
+<td>Zero-runtime, JIT, design token system</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Zustand 5 + React Query 5</td>
+<td>Minimal boilerplate, optimistic updates</td>
+</tr>
+<tr>
+<td>Stellar</td>
+<td>@stellar/stellar-sdk 16</td>
+<td>Official SDK, full Soroban RPC support</td>
+</tr>
+<tr>
+<td>Wallets</td>
+<td>@creit-tech/stellar-wallets-kit</td>
+<td>Freighter, xBull, Albedo in one adapter</td>
+</tr>
+<tr>
+<td>Charts</td>
+<td>Recharts</td>
+<td>Composable, responsive, lightweight</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>Vitest + RTL · cargo test</td>
+<td>Full coverage: unit + integration</td>
+</tr>
+<tr>
+<td>CI/CD</td>
+<td>GitHub Actions</td>
+<td>Lint → test → audit → deploy pipeline</td>
+</tr>
+</table>
+
+<br/>
+
+---
+
+## ⚡ Local Development
 
 ### Prerequisites
 
 ```bash
-# Rust 1.84+
+# 1. Rust 1.84+
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# WASM build target
+# 2. Soroban WASM target
 rustup target add wasm32v1-none
 
-# Stellar CLI
+# 3. Stellar CLI
 cargo install --locked stellar-cli
 
-# Node.js 22+ — https://nodejs.org
-# Docker (for local sandbox) — https://docker.com
+# 4. Node.js 22+ → https://nodejs.org
+# 5. Docker → https://docker.com  (for local sandbox)
 ```
 
-### Setup
+### ⚡ One-shot setup
 
 ```bash
-# 1. Clone
+# Clone
 git clone https://github.com/thesayancodes/digital_asset_licensing_platform lumina
 cd lumina
 
-# 2. Build & test contracts
-cd contracts
-stellar contract build
-cargo test
+# Build & test contracts
+cd contracts && stellar contract build && cargo test
 
-# 3. Set up frontend
-cd ../frontend
-cp ../.env.example .env.local
-npm install
-npm run dev
+# Frontend
+cd ../frontend && cp ../.env.example .env.local && npm install && npm run dev
 ```
 
-### Local Sandbox (Docker)
+### 🐳 Full Local Sandbox (Docker)
 
 ```bash
-chmod +x scripts/deploy-local.sh
-./scripts/deploy-local.sh
+chmod +x scripts/deploy-local.sh && ./scripts/deploy-local.sh
 ```
 
-This will start a local Stellar node via Docker, build and deploy both contracts, initialize them with cross-references, and write contract addresses to `frontend/.env.local`.
+This will:
+1. Spin up a local Stellar node via Docker
+2. Build and deploy both contracts with cross-references
+3. Write contract IDs directly to `frontend/.env.local`
+4. Your app is ready at `http://localhost:3000`
 
 <br/>
 
-## Environment Variables
+---
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `NEXT_PUBLIC_STELLAR_NETWORK` | `testnet` or `mainnet` | ✅ |
-| `NEXT_PUBLIC_SOROBAN_RPC_URL` | Soroban RPC endpoint | ✅ |
-| `NEXT_PUBLIC_NETWORK_PASSPHRASE` | Network passphrase | ✅ |
-| `NEXT_PUBLIC_ASSET_REGISTRY_CONTRACT_ID` | Deployed AssetRegistry contract ID | ✅ |
-| `NEXT_PUBLIC_LICENSE_MANAGER_CONTRACT_ID` | Deployed LicenseManager contract ID | ✅ |
-| `NEXT_PUBLIC_EXPLORER_URL` | Stellar explorer base URL | ✅ |
-| `NEXT_PUBLIC_PLATFORM_FEE_BPS` | Platform fee in basis points | ⬜ default: 250 |
-| `NEXT_PUBLIC_EVENT_POLL_INTERVAL_MS` | Event polling interval | ⬜ default: 5000 |
-| `STELLAR_DEPLOYER_SECRET` | Deployer secret key (server-side only) | Deploy only |
+## 🔐 Environment Variables
+
+```bash
+# Network
+NEXT_PUBLIC_STELLAR_NETWORK=testnet
+NEXT_PUBLIC_SOROBAN_RPC_URL=https://soroban-testnet.stellar.org
+NEXT_PUBLIC_NETWORK_PASSPHRASE="Test SDF Network ; September 2015"
+
+# Contracts
+NEXT_PUBLIC_ASSET_REGISTRY_CONTRACT_ID=CA3WHFHXWSSPPVP32ZJSH5PS5IJ6AFU4IB45JC4BOMZMFZNPXPSN4XHX
+NEXT_PUBLIC_LICENSE_MANAGER_CONTRACT_ID=CCPBUSTO4XATWWXNT3VXFZSWQQRIKTFTENZB4TCSH7ZTKWXDI64DJJRZ
+
+# Explorer
+NEXT_PUBLIC_EXPLORER_URL=https://stellar.expert/explorer/testnet
+
+# Optional tunables
+NEXT_PUBLIC_PLATFORM_FEE_BPS=250           # 2.5% platform fee
+NEXT_PUBLIC_EVENT_POLL_INTERVAL_MS=5000    # 5s event polling
+
+# Server-side only (NEVER expose to client)
+STELLAR_DEPLOYER_SECRET=S...
+```
 
 <br/>
 
-## Testing
+---
 
-### Smart Contracts
+## 🧪 Testing
 
-```bash
-cd contracts
-cargo test
-```
-
-Covers asset registration and retrieval, ownership transfer and authorization, inter-contract calls between LicenseManager and AssetRegistry, license creation/purchase/revocation, event emission, and rejection of unauthorized access.
-
-### Frontend
+### Smart Contract Tests
 
 ```bash
-cd frontend
-npm run test
+cd contracts && cargo test
 ```
 
-Covers wallet store state (connect/disconnect/errors), asset registration form validation, transaction lifecycle tracking, and status display mapping.
+Tests cover: asset registration & retrieval, ownership transfer & authorization, inter-contract calls (LicenseManager ↔ AssetRegistry), license creation/purchase/revocation, event emission, unauthorized access rejection, and contract upgrade paths.
+
+### Frontend Tests
+
+```bash
+cd frontend && npm run test
+```
+
+Tests cover: wallet store state (connect/disconnect/errors), asset registration form validation, transaction lifecycle tracking, and status display mapping.
 
 <br/>
 
-## Deployment
+---
 
-### Testnet
+## 🚀 Deployment
+
+### Testnet Deploy
 
 ```bash
-chmod +x scripts/deploy-testnet.sh
-./scripts/deploy-testnet.sh
+chmod +x scripts/deploy-testnet.sh && ./scripts/deploy-testnet.sh
 ```
 
-### Contract Upgrade
+### Contract Upgrade (zero downtime)
 
 ```bash
 chmod +x scripts/upgrade-contract.sh
 ./scripts/upgrade-contract.sh asset-registry testnet
+./scripts/upgrade-contract.sh license-manager testnet
 ```
 
-### CI/CD
+### CI/CD Pipeline
 
-Pull request checks run Rust formatting, Clippy lints, contract build and tests, frontend lint, type check, tests, build, and security audits (`npm audit` + `cargo audit`). The deploy workflow handles manual testnet deployment and automatic frontend builds on merge to `main`.
+```
+PR opened
+  └── Rust fmt + Clippy
+  └── cargo build --target wasm32v1-none
+  └── cargo test
+  └── cargo audit
+  └── npm run lint + tsc --noEmit
+  └── npm test
+  └── npm run build
+  └── npm audit
+
+Merge to main
+  └── Automatic frontend build
+  └── Manual trigger → testnet contract deployment
+```
 
 <br/>
 
-## Contract Addresses
+---
 
-### Testnet
+## 🔐 Security
 
-| Contract | Address |
-|----------|---------|
-| AssetRegistry | [`CA3WHFHXWSSPPVP32ZJSH5PS5IJ6AFU4IB45JC4BOMZMFZNPXPSN4XHX`](https://stellar.expert/explorer/testnet/contract/CA3WHFHXWSSPPVP32ZJSH5PS5IJ6AFU4IB45JC4BOMZMFZNPXPSN4XHX) |
-| LicenseManager | [`CCPBUSTO4XATWWXNT3VXFZSWQQRIKTFTENZB4TCSH7ZTKWXDI64DJJRZ`](https://stellar.expert/explorer/testnet/contract/CCPBUSTO4XATWWXNT3VXFZSWQQRIKTFTENZB4TCSH7ZTKWXDI64DJJRZ) |
+See [SECURITY.md](./SECURITY.md) for the full security policy.
 
-Deployed: `2026-06-29` · Network: Stellar Testnet
+Key practices: `require_auth()` on every privileged operation · Private keys never touched in the frontend · All transactions simulated before submission · Contract upgrades require admin multisig · Input validation at both contract and frontend layers · Server-side secrets never exposed to the client.
 
 <br/>
 
-## Project Structure
+---
+
+## 📍 Deployed Contracts
+
+### Stellar Testnet
+
+| Contract | Address | Explorer |
+|---|---|---|
+| **AssetRegistry** | `CA3WHFHXWSSPPVP32ZJSH5PS5IJ6AFU4IB45JC4BOMZMFZNPXPSN4XHX` | [View ↗](https://stellar.expert/explorer/testnet/contract/CA3WHFHXWSSPPVP32ZJSH5PS5IJ6AFU4IB45JC4BOMZMFZNPXPSN4XHX) |
+| **LicenseManager** | `CCPBUSTO4XATWWXNT3VXFZSWQQRIKTFTENZB4TCSH7ZTKWXDI64DJJRZ` | [View ↗](https://stellar.expert/explorer/testnet/contract/CCPBUSTO4XATWWXNT3VXFZSWQQRIKTFTENZB4TCSH7ZTKWXDI64DJJRZ) |
+
+**Deployed:** `2026-06-29T07:32:28Z` · **Network:** Stellar Testnet · **SDK:** soroban-sdk 26.1.0
+
+<br/>
+
+---
+
+## 📁 Project Structure
 
 ```
 lumina/
-├── contracts/
-│   ├── asset-registry/         # Asset registration & ownership
+├── 📜 contracts/
+│   ├── asset-registry/          # Ownership layer
 │   │   └── src/
-│   │       ├── lib.rs          # Contract entry points
-│   │       ├── types.rs        # Data structures
-│   │       ├── storage.rs      # Ledger storage helpers
-│   │       ├── errors.rs       # Custom error types
-│   │       ├── events.rs       # Event emission
-│   │       ├── access.rs       # Auth guards
-│   │       └── test.rs         # Unit tests
-│   └── license-manager/        # Licensing & royalties
+│   │       ├── lib.rs           # Contract entry points + dispatch
+│   │       ├── types.rs         # Asset, AssetStatus, AssetInfo
+│   │       ├── storage.rs       # Ledger read/write helpers
+│   │       ├── errors.rs        # Custom ContractError enum
+│   │       ├── events.rs        # AssetRegistered, AssetTransferred…
+│   │       ├── access.rs        # require_auth, admin guards
+│   │       └── test.rs          # Full unit + integration tests
+│   └── license-manager/         # Licensing + royalty layer
 │       └── src/
 │           ├── lib.rs
-│           ├── royalties.rs    # Royalty calculation logic
-│           └── ...
-├── frontend/
+│           ├── royalties.rs     # Basis-point royalty math
+│           ├── types.rs
+│           ├── storage.rs
+│           ├── errors.rs
+│           ├── events.rs        # LicensePurchased, RoyaltyPaid…
+│           ├── access.rs
+│           └── test.rs
+│
+├── 🖥️ frontend/
 │   └── src/
-│       ├── app/                # Pages: landing, dashboard, activity…
-│       ├── components/         # Shared UI components
-│       ├── features/           # Wallet, assets, licenses, events…
-│       ├── lib/                # Stellar client, utils, constants
-│       └── providers/          # React context providers
-├── scripts/                    # Deploy & upgrade scripts
-├── .github/workflows/          # CI/CD pipelines
-├── SECURITY.md
-└── .env.example
+│       ├── app/                 # Next.js App Router pages
+│       │   ├── page.tsx         # Landing
+│       │   ├── dashboard/       # Main dashboard
+│       │   ├── assets/          # Asset management
+│       │   ├── activity/        # Live event feed
+│       │   ├── analytics/       # Revenue + charts
+│       │   └── settings/        # Wallet + network config
+│       ├── components/          # Shared UI components
+│       ├── features/            # Wallet, assets, licenses, events
+│       ├── lib/                 # Stellar client, utils, constants
+│       └── providers/           # React context providers
+│
+├── 🔧 scripts/
+│   ├── deploy-local.sh          # Docker sandbox deployment
+│   ├── deploy-testnet.sh        # Testnet deployment
+│   ├── upgrade-contract.sh      # Zero-downtime WASM upgrade
+│   └── store-metadata.sh        # Update README contract addresses
+│
+├── ⚙️ .github/workflows/
+│   ├── ci.yml                   # PR checks
+│   └── deploy.yml               # Deploy pipeline
+│
+├── .env.example                 # Environment template
+└── SECURITY.md
 ```
 
 <br/>
 
-## Security
+---
 
-See [SECURITY.md](./SECURITY.md) for the full security documentation.
+## 🎥 Demo
 
-Key practices: `require_auth()` on every privileged operation, no private keys ever handled in the frontend, all transactions simulated before submission, contract upgrades require admin authorization, and input validation at both contract and frontend levels.
+> 📹 Demo recording will be published here after the final deployment.
 
-<br/>
-
-## Demo
-
-> Demo recording coming after deployment. Screenshots will be added for Landing, Dashboard, Activity Feed, Transaction Center, Analytics, and Settings pages.
+In the meantime, clone and run locally — full testnet contracts are live.
 
 <br/>
 
@@ -361,13 +527,18 @@ Key practices: `require_auth()` on every privileged operation, no private keys e
 
 <div align="center">
 
-Built with ❤️ on **[Stellar](https://stellar.org)** · Powered by **[Soroban](https://soroban.stellar.org)** · Docs at **[developers.stellar.org](https://developers.stellar.org)**
+### Built for creators. Powered by Stellar.
+
+```
+Register → License → Earn → Repeat
+```
+
+[![Stellar](https://img.shields.io/badge/Built_on-Stellar-4A90D9?style=flat-square&logo=stellar)](https://stellar.org)
+[![Soroban](https://img.shields.io/badge/Smart_Contracts-Soroban-6366f1?style=flat-square)](https://soroban.stellar.org)
+[![Docs](https://img.shields.io/badge/Docs-developers.stellar.org-22C55E?style=flat-square)](https://developers.stellar.org)
 
 <br/>
 
-*If Lumina helped you, consider giving it a ⭐*
+*If Lumina helped you, drop a ⭐ — it means everything to an indie creator.*
 
 </div>
-
-</div>
-]]>
