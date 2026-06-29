@@ -1,0 +1,157 @@
+name: Deploy — Lumina
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      deploy_contracts:
+        description: "Deploy contracts to testnet"
+        required: false
+        default: "false"
+        type: boolean
+      deploy_frontend:
+        description: "Deploy frontend"
+        required: false
+        default: "true"
+        type: boolean
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  # ─────────────────────────────────────
+  # Deploy Contracts to Testnet
+  # ─────────────────────────────────────
+  deploy-contracts:
+    name: Deploy Contracts
+    runs-on: ubuntu-latest
+    if: github.event.inputs.deploy_contracts == 'true'
+    defaults:
+      run:
+        working-directory: contracts
+
+    outputs:
+      asset_registry_id: ${{ steps.deploy.outputs.asset_registry_id }}
+      license_manager_id: ${{ steps.deploy.outputs.license_manager_id }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32v1-none
+
+      - name: Install Stellar CLI
+        run: cargo install --locked stellar-cli
+
+      - name: Build contracts
+        run: stellar contract build
+
+      - name: Deploy to Testnet
+        id: deploy
+        env:
+          STELLAR_SECRET_KEY: ${{ secrets.STELLAR_DEPLOYER_SECRET }}
+        run: |
+          # Generate deployer identity
+          echo "$STELLAR_SECRET_KEY" | stellar keys add deployer --secret-key --global
+
+          # Deploy AssetRegistry
+          ASSET_REG_ID=$(stellar contract deploy \
+            --wasm target/wasm32v1-none/release/asset_registry.wasm \
+            --source deployer \
+            --network testnet)
+          echo "asset_registry_id=$ASSET_REG_ID" >> "$GITHUB_OUTPUT"
+          echo "✅ AssetRegistry deployed: $ASSET_REG_ID"
+
+          # Deploy LicenseManager
+          LICENSE_MGR_ID=$(stellar contract deploy \
+            --wasm target/wasm32v1-none/release/license_manager.wasm \
+            --source deployer \
+            --network testnet)
+          echo "license_manager_id=$LICENSE_MGR_ID" >> "$GITHUB_OUTPUT"
+          echo "✅ LicenseManager deployed: $LICENSE_MGR_ID"
+
+      - name: Initialize contracts
+        env:
+          STELLAR_SECRET_KEY: ${{ secrets.STELLAR_DEPLOYER_SECRET }}
+        run: |
+          ADMIN_ADDR=$(stellar keys address deployer --global)
+          ASSET_REG_ID="${{ steps.deploy.outputs.asset_registry_id }}"
+          LICENSE_MGR_ID="${{ steps.deploy.outputs.license_manager_id }}"
+
+          # Initialize AssetRegistry
+          stellar contract invoke \
+            --id "$ASSET_REG_ID" \
+            --source deployer \
+            --network testnet \
+            -- initialize \
+            --admin "$ADMIN_ADDR" \
+            --license_contract "$LICENSE_MGR_ID"
+
+          echo "✅ AssetRegistry initialized"
+
+          # Initialize LicenseManager
+          stellar contract invoke \
+            --id "$LICENSE_MGR_ID" \
+            --source deployer \
+            --network testnet \
+            -- initialize \
+            --admin "$ADMIN_ADDR" \
+            --asset_registry "$ASSET_REG_ID" \
+            --fee_bps 250
+
+          echo "✅ LicenseManager initialized"
+
+  # ─────────────────────────────────────
+  # Deploy Frontend
+  # ─────────────────────────────────────
+  deploy-frontend:
+    name: Deploy Frontend
+    runs-on: ubuntu-latest
+    if: github.event.inputs.deploy_frontend != 'false'
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_STELLAR_NETWORK: ${{ vars.STELLAR_NETWORK || 'testnet' }}
+          NEXT_PUBLIC_SOROBAN_RPC_URL: ${{ vars.SOROBAN_RPC_URL || 'https://soroban-testnet.stellar.org' }}
+          NEXT_PUBLIC_ASSET_REGISTRY_CONTRACT_ID: ${{ vars.ASSET_REGISTRY_CONTRACT_ID }}
+          NEXT_PUBLIC_LICENSE_MANAGER_CONTRACT_ID: ${{ vars.LICENSE_MANAGER_CONTRACT_ID }}
+          NEXT_PUBLIC_EXPLORER_URL: ${{ vars.EXPLORER_URL || 'https://stellar.expert/explorer/testnet' }}
+
+      # Deploy to Vercel (uncomment and configure)
+      # - name: Deploy to Vercel
+      #   uses: amondnet/vercel-action@v25
+      #   with:
+      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+      #     vercel-args: '--prod'
+      #     working-directory: frontend
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build
+          path: frontend/.next/
+          retention-days: 7

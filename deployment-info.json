@@ -1,0 +1,15 @@
+{
+  "network": "testnet",
+  "deployer": "GAQEBOZHPRJ4XSZFRCXZQ33XMN2CZCGEPITEEBESV3C7RIAWW4GG6ZJN",
+  "deployedAt": "2026-06-29T07:32:28Z",
+  "contracts": {
+    "assetRegistry": {
+      "contractId": "CA3WHFHXWSSPPVP32ZJSH5PS5IJ6AFU4IB45JC4BOMZMFZNPXPSN4XHX",
+      "explorerUrl": "https://stellar.expert/explorer/testnet/contract/CA3WHFHXWSSPPVP32ZJSH5PS5IJ6AFU4IB45JC4BOMZMFZNPXPSN4XHX"
+    },
+    "licenseManager": {
+      "contractId": "CCPBUSTO4XATWWXNT3VXFZSWQQRIKTFTENZB4TCSH7ZTKWXDI64DJJRZ",
+      "explorerUrl": "https://stellar.expert/explorer/testnet/contract/CCPBUSTO4XATWWXNT3VXFZSWQQRIKTFTENZB4TCSH7ZTKWXDI64DJJRZ"
+    }
+  }
+}
