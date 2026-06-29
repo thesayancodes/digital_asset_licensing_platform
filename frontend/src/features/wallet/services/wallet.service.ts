@@ -24,7 +24,7 @@ async function initKit(): Promise<WalletKitType | null> {
   if (typeof window === 'undefined') return null;
 
   try {
-    const walletKit = await import('@creit-tech/stellar-wallets-kit');
+    const walletKit = (await import('@creit-tech/stellar-wallets-kit')) as any;
 
     const {
       StellarWalletsKit,

@@ -28,12 +28,12 @@ export default function AnalyticsPage() {
         </div>
 
         {/* Revenue Chart */}
-        <RevenueChart data={revenueData} />
+        <RevenueChart />
 
         {/* Two Column */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* License Distribution */}
-          <LicenseChart data={licenseData} />
+          <LicenseChart />
 
           {/* Top Assets */}
           <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6 backdrop-blur-sm">

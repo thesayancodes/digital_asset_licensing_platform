@@ -45,7 +45,7 @@ jobs:
           targets: wasm32v1-none
 
       - name: Install Stellar CLI
-        run: cargo install --locked stellar-cli
+        run: curl -fsSL https://github.com/stellar/stellar-cli/raw/main/install.sh | sudo sh -s -- --to /usr/local/bin
 
       - name: Build contracts
         run: stellar contract build
