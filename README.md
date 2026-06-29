@@ -4,7 +4,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=LUMINA;Digital+Asset+Licensing;Powered+by+Stellar+%2B+Soroban">
-  <img alt="Lumina" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=LUMINA+PROTOCOL;Digital+Asset+Licensing;Powered+by+Stellar+%2B+Soroban">
+  <img alt="Lumina" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=LUMINA;Digital+Asset+Licensing;Powered+by+Stellar+%2B+Soroban">
 </picture>
 
 <br/>
