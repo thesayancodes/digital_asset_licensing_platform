@@ -62,10 +62,10 @@ export default function TransactionsPage() {
         </div>
 
         {/* Tabs */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 overflow-x-auto whitespace-nowrap scrollbar-none pb-1">
           {TABS.map((t) => (
             <button key={t} onClick={() => setTab(t)}
-              className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+              className={`px-4 py-2 rounded-xl text-sm font-medium transition-all shrink-0 ${
                 tab === t
                   ? 'bg-violet-500/20 border border-violet-500/40 text-violet-300'
                   : 'bg-white/[0.03] border border-white/[0.08] text-white/50 hover:text-white hover:bg-white/[0.06]'

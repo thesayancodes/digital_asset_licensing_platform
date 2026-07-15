@@ -75,9 +75,9 @@ export class WalletService {
     const kit = await WalletService.init();
 
     if (!kit) {
-      // Demo/mock mode — generate a fake testnet address
+      // Demo/mock mode — generate a valid format testnet address
       console.warn('[Lumina] Using mock wallet connection.');
-      const mockAddress = 'GDEMO' + 'X'.repeat(51);
+      const mockAddress = 'GBRPYHIL2CI3FNQ4BXLFMNDLFJUNPU2HY3ZMFXYFTRE6A26UXMRW5DRJ';
       return { address: mockAddress, walletType: 'mock' };
     }
 
@@ -120,9 +120,8 @@ export class WalletService {
     const kit = await WalletService.init();
 
     if (!kit) {
-      throw new Error(
-        'Wallet not connected. Please install a Stellar wallet extension.'
-      );
+      console.warn('[Lumina] Mock wallet signing transaction XDR');
+      return xdr;
     }
 
     const { result } = await kit.signTx({

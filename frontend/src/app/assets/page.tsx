@@ -115,16 +115,15 @@ export default function AssetsPage() {
         royaltyBps: Math.round(royaltyPercent * 100),
       });
 
-      // Clear states on success
-      setTimeout(() => {
-        setView('portfolio');
-        setName('');
-        setDescription('');
-        setFileName(null);
-        setActiveTxId(null);
-      }, 2000);
+      // Clear states & navigate to portfolio immediately
+      setView('portfolio');
+      setName('');
+      setDescription('');
+      setFileName(null);
+      setActiveTxId(null);
     } catch (err) {
       console.error('Registration failed:', err);
+      setActiveTxId(null);
     }
   };
 

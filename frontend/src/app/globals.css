@@ -364,6 +364,15 @@ body {
   scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }
 
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* ============================================
    Selection Styling
    ============================================ */

@@ -17,7 +17,9 @@ interface AppShellProps {
 export function AppShell({ children, title }: AppShellProps) {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth >= 1024 : true
+  );
 
   // Initialize and track screen width to prevent hydration mismatch
   useEffect(() => {

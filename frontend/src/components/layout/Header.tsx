@@ -81,10 +81,10 @@ export function Header({
         </button>
 
         {/* Network Indicator Selector */}
-        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#090d23] border border-[#141b3a] text-xs font-semibold text-white/80 cursor-pointer hover:bg-[#0c1333] transition-all">
-          <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span>Testnet</span>
-          <ChevronDown className="w-3.5 h-3.5 text-white/30 ml-1" />
+        <div className="flex items-center gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#090d23] border border-[#141b3a] text-xs font-semibold text-white/80 cursor-pointer hover:bg-[#0c1333] transition-all">
+          <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+          <span className="hidden sm:inline">Testnet</span>
+          <ChevronDown className="hidden sm:inline w-3.5 h-3.5 text-white/30 ml-1 shrink-0" />
         </div>
 
         {/* Divider */}

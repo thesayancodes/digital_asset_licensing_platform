@@ -43,10 +43,10 @@ export default function LicensesPage() {
         </div>
 
         {/* Tabs switcher */}
-        <div className="flex border-b border-white/[0.06] gap-6 text-sm">
+        <div className="flex border-b border-white/[0.06] gap-6 text-sm overflow-x-auto whitespace-nowrap scrollbar-none">
           <button
             onClick={() => setActiveTab('purchased')}
-            className={`pb-4 font-medium transition-all ${
+            className={`pb-4 font-medium transition-all shrink-0 ${
               activeTab === 'purchased'
                 ? 'text-white border-b-2 border-accent-primary'
                 : 'text-white/40 hover:text-white/80'
@@ -56,7 +56,7 @@ export default function LicensesPage() {
           </button>
           <button
             onClick={() => setActiveTab('templates')}
-            className={`pb-4 font-medium transition-all ${
+            className={`pb-4 font-medium transition-all shrink-0 ${
               activeTab === 'templates'
                 ? 'text-white border-b-2 border-accent-primary'
                 : 'text-white/40 hover:text-white/80'

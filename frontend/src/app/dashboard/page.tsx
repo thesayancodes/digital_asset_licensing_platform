@@ -5,6 +5,7 @@
 // ============================================
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { AppShell } from '@/components/layout/AppShell';
 import { 
   Package, 
@@ -155,46 +156,49 @@ export default function DashboardPage() {
           <div className="lg:col-span-2 bg-[#090d23] border border-[#141b3a] rounded-xl p-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-white text-sm font-bold tracking-wide">Recent Assets</h3>
-              <a
+              <Link
                 href="/assets"
+                prefetch={true}
                 className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white font-bold px-3 py-1.5 rounded-lg text-[10px] transition-all"
               >
                 <Plus className="w-3 h-3" />
                 Register Asset
-              </a>
+              </Link>
             </div>
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto scrollbar-none">
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
                   <tr className="border-b border-[#141b3a] text-white/30 font-bold uppercase tracking-wider text-[10px]">
                     <th className="pb-3">Asset</th>
-                    <th className="pb-3">Type</th>
-                    <th className="pb-3 text-center">Licenses</th>
+                    <th className="pb-3 hidden md:table-cell">Type</th>
+                    <th className="pb-3 hidden sm:table-cell text-center">Licenses</th>
                     <th className="pb-3 text-right">Revenue</th>
-                    <th className="pb-3 text-center">Status</th>
+                    <th className="pb-3 hidden sm:table-cell text-center">Status</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#141b3a]/30 font-bold">
                   {recentAssets.map((asset) => (
                     <tr key={asset.id} className="hover:bg-white/[0.01] transition-all">
-                      <td className="py-3 flex items-center gap-3">
-                        <div className={cn("w-8 h-8 rounded-lg flex items-center justify-center shrink-0", asset.iconColor)}>
-                          <asset.icon className="w-4 h-4" />
-                        </div>
-                        <div className="min-w-0">
-                          <p className="text-white font-bold text-xs truncate">{asset.name}</p>
-                          <p className="text-white/30 text-[10px] font-mono mt-0.5 truncate">{asset.subtext}</p>
+                      <td className="py-3 pr-2">
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className={cn("w-8 h-8 rounded-lg flex items-center justify-center shrink-0", asset.iconColor)}>
+                            <asset.icon className="w-4 h-4" />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <p className="text-white font-bold text-xs truncate">{asset.name}</p>
+                            <p className="text-white/30 text-[10px] font-mono mt-0.5 truncate">{asset.subtext}</p>
+                          </div>
                         </div>
                       </td>
-                      <td className="py-3">
+                      <td className="py-3 hidden md:table-cell">
                         <span className={cn("px-2 py-0.5 rounded text-[10px] font-semibold border", asset.typeColor)}>
                           {asset.type}
                         </span>
                       </td>
-                      <td className="py-3 text-center text-white/80">{asset.licenses}</td>
+                      <td className="py-3 hidden sm:table-cell text-center text-white/80">{asset.licenses}</td>
                       <td className="py-3 text-right text-white/90">{asset.revenue}</td>
-                      <td className="py-3 text-center">
+                      <td className="py-3 hidden sm:table-cell text-center">
                         <span className={cn("px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider", asset.statusColor)}>
                           {asset.status}
                         </span>

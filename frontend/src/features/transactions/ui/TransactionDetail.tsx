@@ -32,7 +32,12 @@ export function TransactionDetail({ tx, onClose }: TransactionDetailProps) {
 
       {/* Status Timeline */}
       <div className="space-y-1">
-        <p className="text-white/50 text-xs font-medium uppercase tracking-wider mb-3">Progress</p>
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-white/50 text-xs font-medium uppercase tracking-wider">Progress</p>
+          <span className="text-[9px] px-2.5 py-0.5 rounded-full bg-violet-500/10 text-violet-300 font-bold uppercase tracking-wider">
+            Current: {tx.status}
+          </span>
+        </div>
         <div className="flex items-center gap-1">
           {STAGES.map((stage, i) => (
             <div key={stage} className="flex-1 flex flex-col items-center gap-1.5">
@@ -43,7 +48,7 @@ export function TransactionDetail({ tx, onClose }: TransactionDetailProps) {
                   ? 'bg-gradient-to-r from-violet-500 to-cyan-500'
                   : 'bg-white/[0.08]'
               }`} />
-              <span className={`text-[10px] ${i <= currentIndex ? 'text-white/60' : 'text-white/20'}`}>
+              <span className={`text-[9px] hidden sm:inline ${i <= currentIndex ? 'text-white/60' : 'text-white/20'}`}>
                 {stage}
               </span>
             </div>

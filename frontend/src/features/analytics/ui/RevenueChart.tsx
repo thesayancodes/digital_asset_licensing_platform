@@ -44,14 +44,14 @@ export function RevenueChart() {
   return (
     <div className="bg-[#090d23] border border-[#141b3a] rounded-xl p-6 relative">
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
           <h3 className="text-white text-sm font-bold tracking-wide">Revenue Overview</h3>
           <p className="text-white/30 text-[10px] font-bold tracking-wide mt-0.5">Monthly licensing revenue in XLM</p>
         </div>
 
         {/* Timeframe Selector */}
-        <div className="flex bg-[#050818] border border-[#141b3a] rounded-lg p-0.5 text-[10px] font-bold">
+        <div className="flex bg-[#050818] border border-[#141b3a] rounded-lg p-0.5 text-[10px] font-bold self-start sm:self-auto">
           {(['7D', '30D', '90D'] as const).map((t) => (
             <button
               key={t}
