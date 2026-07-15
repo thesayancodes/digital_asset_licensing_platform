@@ -521,7 +521,10 @@ lumina/
 
 ## 🎥 Demo
 
-https://github.com/user-attachments/assets/73f074c3-e540-4947-ba29-bb2bc1b28d0a
+
+
+https://github.com/user-attachments/assets/17988d9b-9b0b-4ba6-a56b-d04b53b47b72
+
 
 
 In the meantime, clone and run locally — full testnet contracts are live.
