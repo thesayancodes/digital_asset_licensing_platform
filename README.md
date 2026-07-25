@@ -33,7 +33,7 @@
 
 <br/>
 
-[**🚀 Live Demo**](#-demo) &nbsp;·&nbsp; [**💡 Idea Submission**](./IDEA_SUBMISSION.md) &nbsp;·&nbsp; [**🏅 Level 4 & 5 Report**](./LEVEL_4_5_COMPLIANCE.md) &nbsp;·&nbsp; [**📜 Smart Contracts**](#-contract-addresses) &nbsp;·&nbsp; [**⚡ Quick Start**](#-local-development)
+[**🚀 Live Demo**](https://frontend-swart-gamma-36.vercel.app) &nbsp;·&nbsp; [**💡 Idea Submission**](./IDEA_SUBMISSION.md) &nbsp;·&nbsp; [**🏅 Level 4 & 5 Report**](./LEVEL_4_5_COMPLIANCE.md) &nbsp;·&nbsp; [**📜 Smart Contracts**](#-contract-addresses) &nbsp;·&nbsp; [**⚡ Quick Start**](#-local-development)
 
 
 <br/>
