@@ -77,11 +77,14 @@ impl LicenseManagerContract {
     }
 
     /// Purchase a license for an asset. Returns the new license ID.
+    /// Purchase a license for an asset. Returns the new license ID.
+    /// Supports optional token transfer for live payment processing.
     pub fn purchase_license(
         env: Env,
         buyer: Address,
         asset_id: u64,
         license_type: LicenseType,
+        payment_token: Option<Address>,
     ) -> u64 {
         buyer.require_auth();
 
@@ -127,6 +130,18 @@ impl LicenseManagerContract {
         let fee_bps = storage::get_platform_fee_bps(&env);
         let royalty_amount = royalties::calculate_royalty(template.price, asset_info.royalty_bps);
         let platform_fee = royalties::calculate_platform_fee(template.price, fee_bps);
+
+        // Execute SAC token payment transfers if payment_token is specified
+        if let Some(token_addr) = payment_token {
+            let token_client = soroban_sdk::token::Client::new(&env, &token_addr);
+            if royalty_amount > 0 {
+                token_client.transfer(&buyer, &asset_info.owner, &royalty_amount);
+            }
+            if platform_fee > 0 {
+                let admin = storage::get_admin(&env);
+                token_client.transfer(&buyer, &admin, &platform_fee);
+            }
+        }
 
         // Store royalty record
         let record = RoyaltyRecord {
@@ -201,6 +216,24 @@ impl LicenseManagerContract {
         storage::get_license(&env, license_id)
     }
 
+    /// Get royalty payout record by license ID.
+    pub fn get_royalty_record(env: Env, license_id: u64) -> RoyaltyRecord {
+        match storage::get_royalty_record(&env, license_id) {
+            Some(record) => record,
+            None => panic_with_error!(&env, LicenseError::LicenseNotFound),
+        }
+    }
+
+    /// Get total count of licenses created.
+    pub fn get_license_count(env: Env) -> u64 {
+        storage::get_license_count(&env)
+    }
+
+    /// Check if a license template exists for an asset.
+    pub fn has_template(env: Env, asset_id: u64) -> bool {
+        storage::has_template(&env, asset_id)
+    }
+
     /// Get all license IDs for a user.
     pub fn get_user_licenses(env: Env, user: Address) -> Vec<u64> {
         storage::get_user_licenses(&env, &user)
@@ -247,3 +280,4 @@ impl LicenseManagerContract {
 
 #[cfg(test)]
 mod test;
+

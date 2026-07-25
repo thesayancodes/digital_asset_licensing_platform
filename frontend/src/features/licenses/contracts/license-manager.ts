@@ -59,12 +59,14 @@ export async function purchaseLicense(
   sourcePublicKey: string,
   buyer: string,
   assetId: number,
-  licenseType: LicenseType
+  licenseType: LicenseType,
+  paymentToken?: string
 ) {
   const args = [
     new Address(buyer).toScVal(),
     nativeToScVal(assetId, { type: 'u64' }),
     nativeToScVal(licenseType, { type: 'symbol' }),
+    paymentToken ? new Address(paymentToken).toScVal() : nativeToScVal(null),
   ];
   return buildContractCall(sourcePublicKey, LICENSE_MANAGER_CONTRACT_ID, 'purchase_license', args);
 }
@@ -87,6 +89,15 @@ export async function getLicense(sourcePublicKey: string, licenseId: number) {
   return buildContractCall(sourcePublicKey, LICENSE_MANAGER_CONTRACT_ID, 'get_license', args);
 }
 
+export async function getRoyaltyRecord(sourcePublicKey: string, licenseId: number) {
+  const args = [nativeToScVal(licenseId, { type: 'u64' })];
+  return buildContractCall(sourcePublicKey, LICENSE_MANAGER_CONTRACT_ID, 'get_royalty_record', args);
+}
+
+export async function getLicenseCount(sourcePublicKey: string) {
+  return buildContractCall(sourcePublicKey, LICENSE_MANAGER_CONTRACT_ID, 'get_license_count', []);
+}
+
 export async function getUserLicenses(sourcePublicKey: string, user: string) {
   const args = [new Address(user).toScVal()];
   return buildContractCall(sourcePublicKey, LICENSE_MANAGER_CONTRACT_ID, 'get_user_licenses', args);
@@ -101,3 +112,4 @@ export async function getTemplate(sourcePublicKey: string, assetId: number) {
   const args = [nativeToScVal(assetId, { type: 'u64' })];
   return buildContractCall(sourcePublicKey, LICENSE_MANAGER_CONTRACT_ID, 'get_template', args);
 }
+

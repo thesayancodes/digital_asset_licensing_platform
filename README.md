@@ -28,12 +28,13 @@
 [![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
 [![Rust](https://img.shields.io/badge/Rust-Soroban_SDK-CE422B?style=for-the-badge&logo=rust&logoColor=white)](https://rustlang.org)
+[![Level 4 & 5](https://img.shields.io/badge/Level_4_%26_5-Verified-8B5CF6?style=for-the-badge)](./LEVEL_4_5_COMPLIANCE.md)
 [![License](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](./LICENSE)
-[![CI](https://img.shields.io/badge/CI-Passing-22C55E?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/thesayancodes/digital_asset_licensing_platform/actions)
 
 <br/>
 
-[**🚀 Live Demo**](#-demo) &nbsp;·&nbsp; [**📜 Smart Contracts**](#-contract-addresses) &nbsp;·&nbsp; [**⚡ Quick Start**](#-local-development) &nbsp;·&nbsp; [**🏗️ Architecture**](#-architecture)
+[**🚀 Live Demo**](#-demo) &nbsp;·&nbsp; [**💡 Idea Submission**](./IDEA_SUBMISSION.md) &nbsp;·&nbsp; [**🏅 Level 4 & 5 Report**](./LEVEL_4_5_COMPLIANCE.md) &nbsp;·&nbsp; [**📜 Smart Contracts**](#-contract-addresses) &nbsp;·&nbsp; [**⚡ Quick Start**](#-local-development)
+
 
 <br/>
 
@@ -521,10 +522,7 @@ lumina/
 
 ## 🎥 Demo
 
-
-
 https://github.com/user-attachments/assets/17988d9b-9b0b-4ba6-a56b-d04b53b47b72
-
 
 
 In the meantime, clone and run locally — full testnet contracts are live.

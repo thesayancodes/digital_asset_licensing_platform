@@ -125,7 +125,8 @@
                       "symbol": "Enterprise"
                     }
                   ]
-                }
+                },
+                "void"
               ]
             }
           },

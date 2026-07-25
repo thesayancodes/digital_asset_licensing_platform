@@ -153,6 +153,11 @@ pub fn set_royalty_record(env: &Env, license_id: u64, record: &RoyaltyRecord) {
     extend_persistent_ttl(env, &key);
 }
 
+pub fn get_royalty_record(env: &Env, license_id: u64) -> Option<RoyaltyRecord> {
+    let key = DataKey::RoyaltyRecord(license_id);
+    env.storage().persistent().get(&key)
+}
+
 // --- TTL Extensions ---
 pub fn extend_instance_ttl(env: &Env) {
     env.storage()

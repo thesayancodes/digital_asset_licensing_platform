@@ -119,15 +119,26 @@ impl AssetRegistryContract {
         }
     }
 
+    /// Get total count of registered assets.
+    pub fn get_asset_count(env: Env) -> u64 {
+        storage::get_asset_count(&env)
+    }
+
+    /// Get configured license contract address.
+    pub fn get_license_contract(env: Env) -> Address {
+        storage::get_license_contract(&env)
+    }
+
     /// Get the full asset details.
     pub fn get_asset(env: Env, asset_id: u64) -> Asset {
         if !storage::has_asset(&env, asset_id) {
             panic_with_error!(&env, AssetError::AssetNotFound);
         }
 
-        let asset = storage::get_asset(&env, asset_id);
+        let key = DataKey::Asset(asset_id);
+        storage::extend_persistent_ttl(&env, &key);
         storage::extend_instance_ttl(&env);
-        asset
+        storage::get_asset(&env, asset_id)
     }
 
     /// Get all asset IDs owned by a given address.
@@ -176,3 +187,4 @@ impl AssetRegistryContract {
 
 #[cfg(test)]
 mod test;
+
