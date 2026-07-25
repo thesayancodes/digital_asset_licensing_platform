@@ -187,4 +187,3 @@ impl AssetRegistryContract {
 
 #[cfg(test)]
 mod test;
-

@@ -280,4 +280,3 @@ impl LicenseManagerContract {
 
 #[cfg(test)]
 mod test;
-
